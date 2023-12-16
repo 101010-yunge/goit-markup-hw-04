@@ -384,32 +384,34 @@ button.btn {
 
 
 /* FOOTER */
+
 footer {
     background-color: #2e2f42;
     color: #f4f4fd;
     padding: 100px 0;
 }
 
-.no-flex {
-    display: block;
-}
-
-.footer .logo-footer {
-    display: inline-block;
-    margin-bottom: 16px;
-    color: #4d5ae5;
-    
-}
-
-.footer p {
-    max-width: 264px;
-}
-
-.footer .logo-footer .logo-span {
+.logo-span-footer {
     color: #f4f4fd;
-}
-
-.social-media {
+  }
+  .footer .logo-header /* спецефичность выше для logo в footer */ {
+    display: inline-block; /* характеристики блочного и строчного элементов */
+    margin-bottom: 17px;
+    margin-right: auto; /* Смещение вправо с использованием auto маржи справа */
+  }
+  .item-description {
+    max-width: 264px;
+    margin-right: auto; /* Смещение влево с использованием auto маржи справа */
+  }
+  .footer-container {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row; /*определяет направление оси главного контейнера в Flexbox. По умолчанию основная ось идет слева направо. */
+  }
+  .logo-footer-container {
+    margin-right: 120px;
+  }
+  .social-media {
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #fff;
@@ -423,7 +425,6 @@ footer {
     width: 40px;
     height: 40px;
   }
-
   .footer-icon-a {
     display: flex;
     align-items: center;
@@ -433,29 +434,16 @@ footer {
     background-color: #4d5ae5;
     border-radius: 50%;
   }
-
   .footer-icon-a:hover,
   .footer-icon-a:focus {
     background-color: #31d0aa;
   }
-
   .icons-social-footer {
     display: flex;
     justify-content: center;
     fill: #f4f4fd;
   }
-
   .social-footer {
     margin: 0 auto;
     margin-left: 0;
   }
-
-/* ALL */
-
-
-
-
-
-button {
-    cursor: pointer;
-}
